@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg-color: #292c35; 
+  --text-color: #f1f1f1;
+  --winner: #3fca35;
+  --draw-game: #fd2020;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#main {
+  min-width: 15rem;
+  max-width: 40rem;
+  border: 1px solid var(--text-color);
+  padding: .75rem 1.5rem;
+  border-radius: 3px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#switchTheme {
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  border-radius: .5rem;
+  padding: .4rem .8rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all .15s ease-out;
+
+  &:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+  }
+}
+
+#players {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.input-box {
+  display: flex;
+  position: relative;
+  align-items: center;
+  
+}
+
+.input-box input {
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  border-radius: 1.5rem;
+  padding: .4rem .8rem;
+  color: var(--text-color);
+  outline: none;
+}
+
+.input-box label {
+  position: absolute;
+  font-size: .8rem;
+  left: .8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -.7rem;
+  font-size: .75rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.button {
+  padding: .8rem 1.6rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.buttons #startGame {
+  background-color: var(--text-color);
+  border-radius: 3rem;
+  color: var(--bg-color);
+  transition: all .15s;
+
+  &:hover {
+    color: var(--text-color);
+    background-color: #6d6c6c;
+  }
+}
+
+.buttons #restartGame {
+  color: var(--text-color);
+  position: relative;
+  transition: all .15s;
+  &:hover {
+    color: #666;
+  }
+}
+
+.buttons #restartGame::after {
+  content: '';
+  position: absolute;
+  width: 4rem;
+  height: 2px;
+  background-color: var(--text-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#box-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+  margin-top: 2rem;
+}
+
+.box {
+  height: 9rem;
+  width: 9rem;
+  border: 2px solid var(--text-color);
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  #players {
+    flex-direction: column;
+    row-gap: .5rem;
+  }
+
+  #main {
+    max-width: 19rem;
+  }
+
+  .button {
+    font-size: .8rem;
+    padding: .5rem 1rem;
+  }
+
+  .box {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .input-box input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+  <main id="main" data-theme="dark">
+    <header>
+      <h1>Tic-Tac-Toe</h1>
+      <button type="button" id="switchTheme">Alternar Tema</button>
+    </header>
+    <section id="players">
+      <div class="input-box">
+        <input type="text" name="player1" id="player1" required>
+        <label for="player1">Jogador 1</label>
+      </div>
+      <div class="input-box">
+        <input type="text" name="player2" id="player2" required>
+        <label for="player2">Jogador 2</label>
+      </div>
+
+    </section>
+    <div class="buttons">
+      <button class="button" id="startGame">Iniciar</button>
+      <button class="button" id="restartGame">Resetar</button>
+    </div>
+    <section id="box-area">
+      <button class="box" id="box-0" value="0" data-status="inactive" disabled></button>
+      <button class="box" id="box-1" value="1" data-status="inactive" disabled></button>
+      <button class="box" id="box-2" value="2" data-status="inactive" disabled></button>
+      <button class="box" id="box-3" value="3" data-status="inactive" disabled></button>
+      <button class="box" id="box-4" value="4" data-status="inactive" disabled></button>
+      <button class="box" id="box-5" value="5" data-status="inactive" disabled></button>
+      <button class="box" id="box-6" value="6" data-status="inactive" disabled></button>
+      <button class="box" id="box-7" value="7" data-status="inactive" disabled></button>
+      <button class="box" id="box-8" value="8" data-status="inactive" disabled></button>
+    </section>
+  </main>
+</body>
+</html>
