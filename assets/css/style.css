@@ -166,7 +166,7 @@ header {
 
   #players {
     flex-direction: column;
-    row-gap: .5rem;
+    row-gap: 1.5rem;
   }
 
   #main {
