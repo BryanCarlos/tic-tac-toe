@@ -7,3 +7,4 @@ This project uses only:
 - CSS
 - Javascript
 
+Click here to see the game running: [TicTacToe](https://bryancarlos.github.io/tic-tac-toe/)
